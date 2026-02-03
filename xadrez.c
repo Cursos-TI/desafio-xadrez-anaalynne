@@ -28,6 +28,20 @@ printf("======MOVIMENTAÇÃO DO BISPO======\n");
 for (b=0;b<5;b++){
 printf( "Diagonal direita\n");
 }
+//// Uso de loop aninhados para a movimentação da peça de xadrez: Cavalo
+
+    
+printf("\n=========================================\n\n");
+printf("======MOVIMENTAÇÃO DA TORRE======\n");
+    for (c=1;c<=1;c++){  //Movimentação de duas casas para baixo
+    
+    l= 1;
+     while (l<=2){ 
+     printf("Baixo\n");
+     l++;
+     }
+     printf ("Esquerda\n"); //Movimentação de uma casa para esquerda
+    }
 
 return 0;
 }
