@@ -3,6 +3,7 @@ int main() {
   int r=0;
   int t=0;
   int b=0;
+  int c,l;
     
 // Uso da estrutura de repetição DO-WHILE para a movimentação da peça de xadrez: Rainha
     
