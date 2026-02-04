@@ -33,7 +33,7 @@ printf( "Diagonal direita\n");
 
     
 printf("\n=========================================\n\n");
-printf("======MOVIMENTAÇÃO DA TORRE======\n");
+printf("======MOVIMENTAÇÃO DA CAVALO======\n");
     for (c=1;c<=1;c++){  //Movimentação de duas casas para baixo
     
     l= 1;
