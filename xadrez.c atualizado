@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+/* ================= MOVIMENTAÇÃO DA PEÇA RAINHA ================= */
+// 8 casas para a esquerda (recursivo)
+void moverRainha(int casas) {
+    if (casas > 0) {
+        printf("Esquerda\n");
+        moverRainha(casas - 1);
+    }
+}
+
+/* ================= MOVIMENTAÇÃO DA PEÇA TORRE ================= */
+// 5 casas para a direita (recursivo)
+void moverTorre(int casas) {
+    if (casas > 0) {
+        printf("Direita\n");
+        moverTorre(casas - 1);
+    }
+}
+
+/* ================= MOVIMENTAÇÃO DA PEÇA BISPO ================= */
+// 5 casas na diagonal direita (recursivo)
+void moverBispo(int casas) {
+    if (casas > 0) {
+        printf("Direita diagonal\n");
+        moverBispo(casas - 1);
+    }
+}
+
+/* ================= MOVIMENTAÇÃO DA PEÇA CAVALO ================= */
+// 2 casas para baixo e 1 para a esquerda (recursivo)
+void moverCavalo(int baixo, int esquerda) {
+
+    // Caso base
+    if (baixo == 0 && esquerda == 0) {
+        return;
+    }
+
+    if (baixo > 0) {
+        printf("Baixo\n");
+        moverCavalo(baixo - 1, esquerda);
+    } 
+    else if (esquerda > 0) {
+        printf("Esquerda\n");
+        moverCavalo(baixo, esquerda - 1);
+    }
+}
+
+/* ================= MAIN ================= */
+int main() {
+
+    printf("====== MOVIMENTAÇÃO DA RAINHA ======\n");
+    moverRainha(8);
+
+    printf("\n=========================================\n");
+    printf("====== MOVIMENTAÇÃO DA TORRE ======\n");
+    moverTorre(5);
+
+    printf("\n=========================================\n");
+    printf("====== MOVIMENTAÇÃO DO BISPO ======\n");
+    moverBispo(5);
+
+    printf("\n=========================================\n");
+    printf("====== MOVIMENTAÇÃO DO CAVALO ======\n");
+    moverCavalo(2, 1);
+
+    return 0;
+}
